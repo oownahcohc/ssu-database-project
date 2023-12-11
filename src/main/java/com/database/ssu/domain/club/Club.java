@@ -1,4 +1,4 @@
-package com.ssu.database.domain.club;
+package com.database.ssu.domain.club;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

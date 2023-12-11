@@ -1,4 +1,4 @@
-package com.ssu.database.domain.player;
+package com.database.ssu.domain.playerClub;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -7,21 +7,21 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class Player {
+public class PlayerClub {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 
-	@Column(nullable = false, length = 50)
-	private String name;
+	@Column(nullable = false)
+	private Integer playerId;
 
 	@Column(nullable = false)
-	private Integer currentAge;
+	private Integer clubId;
 
-	@Column(nullable = false, length = 50)
-	private String position;
+	@Column(nullable = false)
+	private Integer seasonId;
 
-	protected Player() {
+	protected PlayerClub() {
 	}
 }

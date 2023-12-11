@@ -1,4 +1,4 @@
-package com.ssu.database.domain.stats;
+package com.database.ssu.domain.stats;
 
 import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;

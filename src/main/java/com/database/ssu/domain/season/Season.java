@@ -1,4 +1,4 @@
-package com.ssu.database.domain.season;
+package com.database.ssu.domain.season;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

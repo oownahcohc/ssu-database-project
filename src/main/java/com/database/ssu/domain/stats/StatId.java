@@ -1,4 +1,4 @@
-package com.ssu.database.domain.stats;
+package com.database.ssu.domain.stats;
 
 import java.io.Serializable;
 import java.util.Objects;

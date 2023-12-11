@@ -1,4 +1,4 @@
-package com.ssu.database;
+package com.database.ssu;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
