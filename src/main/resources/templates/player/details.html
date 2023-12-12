@@ -13,25 +13,22 @@
             <div class="col-md-6">
                 <div class="detail-position">
                     <table class="table table-dark">
-                        <thead>
-                        <tr>
-                            <th>attr</th>
-                            <th>value</th>
-                        </tr>
-                        </thead>
                         <tbody>
                         <tr>
                             <td>이름</td>
-                            <td>player_name</td>
+                            <td th:text="${playerInfo.getPlayerName()}"/>
                         </tr>
                         <tr>
                             <td>포지션</td>
-                            <td>position</td>
+                            <td th:text="${playerInfo.getPosition()}"/>
                         </tr>
                         <tr>
-                            <td>나이</td>
-                            <td>current_age</td>
+                            <td>소속</td>
+                            <td th:text="${playerInfo.getClubName()}"/>
                         </tr>
+                        <tr th:each="champsStat : ${champs}">
+                            <td>시즌</td>
+                            <td th:text="${champsStat.getSeason()}"/>
                         </tbody>
                     </table>
                 </div>
@@ -39,32 +36,59 @@
         </div>
     </div>
     <div class="card-body mt-5 mx-5">
-        <b>선수 목록</b>
+        <b>챔피언스리그 지표</b>
         <table class="table table-dark table-hover">
-            <colgroup>
-                <col width="10%">
-                <col width=20%>
-                <col width=20%>
-                <col width=20%>
-                <col width="10%">
-                <col width="10%">
-            </colgroup>
             <tr>
-                <th>#</th>
-                <th>attr1</th>
-                <th>attr2</th>
-                <th>attr3</th>
-                <th>attr4</th>
-                <th>attr5</th>
+                <th>출전시간(분)</th>
+                <th>골</th>
+                <th>어시스트</th>
+                <th>경기당패스</th>
+                <th>경기당가로채기</th>
+                <th>경기당태클</th>
+                <th>평균평점</th>
             </tr>
             <a href="" class="icon-link-hover">
-                <tr onclick="location.href='details.html'">
-                    <th>1</th>
-                    <td>testString</td>
-                    <td>testString</td>
-                    <td>testString</td>
-                    <th>testString</th>
-                    <th>testString</th>
+                <tr th:each="champsStat : ${champs}">
+                    <td th:text="${champsStat.getMins()}"/>
+                    <td th:text="${champsStat.getGoals()}"/>
+                    <td th:text="${champsStat.getAssists()}"/>
+                    <td th:text="${champsStat.getAveragePassesPerGame()}"/>
+                    <td th:text="${champsStat.getInterceptsPerGame()}"/>
+                    <td th:text="${champsStat.getTacklesPerGame()}"/>
+                    <td th:text="${champsStat.getRating()}"/>
+                </tr>
+            </a>
+        </table>
+    </div>
+    <div class="card-body mt-5 mx-5">
+        <b>리그 지표</b>
+        <table class="table table-dark table-hover">
+            <tr>
+                <th>출전시간(분)</th>
+                <th>골</th>
+                <th>어시스트</th>
+                <th>경기당패스</th>
+                <th>경기당키패스</th>
+                <th>경기당가로채기</th>
+                <th>경기당태클</th>
+                <th>경기당걷어내기</th>
+                <th>경기당슈팅</th>
+                <th>경기당드리블</th>
+                <th>평균평점</th>
+            </tr>
+            <a href="" class="icon-link-hover">
+                <tr th:each="leagueStat : ${league}">
+                    <td th:text="${leagueStat.getMins()}"/>
+                    <td th:text="${leagueStat.getGoals()}"/>
+                    <td th:text="${leagueStat.getAssists()}"/>
+                    <td th:text="${leagueStat.getKeyPassesPerGame()}"/> <!--pass-->
+                    <td th:text="${leagueStat.getShotsPerGame()}"/> <!--keypass-->
+                    <td th:text="${leagueStat.getInterceptsPerGame()}"/>
+                    <td th:text="${leagueStat.getTacklesPerGame()}"/>
+                    <td th:text="${leagueStat.getAveragePassesPerGame()}"/> <!--clear-->
+                    <td th:text="${leagueStat.getDribblesPerGame()}"/> <!--shots-->
+                    <td th:text="${leagueStat.getOffsidesPerGame()}"/> <!--dribble-->
+                    <td th:text="${leagueStat.getClearsPerGame()}"/> <!--ratings-->
                 </tr>
             </a>
         </table>
