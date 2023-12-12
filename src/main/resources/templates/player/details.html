@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head th:replace="fragments/header :: header">
+</head>
+<body>
+<div class="card d-flex justify-content-center">
+    <img src="/header.png">
+    <div class="col-md-12 d-flex justify-content-center">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="/footballPlayer.png" class="img-fluid">
+            </div>
+            <div class="col-md-6">
+                <div class="detail-position">
+                    <table class="table table-dark">
+                        <thead>
+                        <tr>
+                            <th>attr</th>
+                            <th>value</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>이름</td>
+                            <td>player_name</td>
+                        </tr>
+                        <tr>
+                            <td>포지션</td>
+                            <td>position</td>
+                        </tr>
+                        <tr>
+                            <td>나이</td>
+                            <td>current_age</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card-body mt-5 mx-5">
+        <b>선수 목록</b>
+        <table class="table table-dark table-hover">
+            <colgroup>
+                <col width="10%">
+                <col width=20%>
+                <col width=20%>
+                <col width=20%>
+                <col width="10%">
+                <col width="10%">
+            </colgroup>
+            <tr>
+                <th>#</th>
+                <th>attr1</th>
+                <th>attr2</th>
+                <th>attr3</th>
+                <th>attr4</th>
+                <th>attr5</th>
+            </tr>
+            <a href="" class="icon-link-hover">
+                <tr onclick="location.href='details.html'">
+                    <th>1</th>
+                    <td>testString</td>
+                    <td>testString</td>
+                    <td>testString</td>
+                    <th>testString</th>
+                    <th>testString</th>
+                </tr>
+            </a>
+        </table>
+    </div>
+</div>
+</body>
+</html>

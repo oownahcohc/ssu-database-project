@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: header">
+</head>
+<body>
+<div class="card">
+    <img src="/header.png">
+    <div class="card-body mt-5 mx-5">
+        <b>선수 목록</b>
+        <table class="table table-dark table-hover">
+            <colgroup>
+                <col width=10%>
+                <col width=20%>
+                <col width=20%>
+                <col width=20%>
+                <col width="10%">
+                <col width="10%">
+            </colgroup>
+            <tr>
+                <th>#</th>
+                <th>이름</th>
+                <th>시즌</th>
+                <th>포지션</th>
+                <th>클럽</th>
+                <th>클럽 소속</th>
+            </tr>
+            <a href="" class="icon-link-hover">
+                <tr onclick="location.href='details.html'">
+                    <th>1</th>
+                    <td>Ronaldo</td>
+                    <td>13-14</td>
+                    <td>FW</td>
+                    <th>Read Madrid</th>
+                    <th>Spain</th>
+                </tr>
+            </a>
+        </table>
+    </div>
+</div>
+</body>
+</html>
