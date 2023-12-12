@@ -4,9 +4,27 @@
     <title>Hello</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link th:href="@{/css}" rel="stylesheet" type="text/css" />
+    <style>
+        .search-position {
+            position: absolute;
+            top: 35%; /* 화면 전체 높이의 3/2 위치로 조정 */
+            left: 50%; /* 가운데 정렬 */
+            transform: translate(-50%, -50%);
+        }
+    </style>
 </head>
 <body>
-Hello
-<a href="/hello">hello</a>
+<div class="position">
+    <div class="card-body mt-5 mx-5">
+        <div class="d-flex justify-content-center">
+            <img src="/logo.png">
+        </div>
+    </div>
+    <div class="input-group mt-5">
+        <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
+               aria-describedby="search-addon"/>
+        <button type="button" class="btn btn-danger">검색</button>
+    </div>
+</div>
 </body>
 </html>
